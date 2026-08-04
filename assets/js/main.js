@@ -135,85 +135,165 @@ function initLoader() {
 }
 
 function initScrollAnimations() {
+
     if (prefersReducedMotion) {
-        document.querySelectorAll("[data-animate], .reveal-item").forEach((el) => el.classList.add("is-visible"));
+
+        document
+            .querySelectorAll("[data-animate], .reveal-item")
+            .forEach(el => el.classList.add("is-visible"));
+
         return;
+
     }
+
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Base reveal (matches your current look, but higher-quality easing and timing)
-    ScrollTrigger.batch("[data-animate]", {
-        start: "top 82%",
-        once: true,
-        onEnter: (batch) => {
-            gsap.to(batch, {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.9,
-                ease: "power3.out",
-                stagger: 0.06
-            });
-        }
+    gsap.utils.toArray("[data-animate]").forEach((element, index) => {
+
+        gsap.set(element, {
+
+            autoAlpha: 0,
+
+            y: 32
+
+        });
+
+        gsap.to(element, {
+
+            autoAlpha: 1,
+
+            y: 0,
+
+            duration: .9,
+
+            ease: "power3.out",
+
+            scrollTrigger: {
+
+                trigger: element,
+
+                start: "top 84%",
+
+                once: true
+
+            }
+
+        });
+
     });
 
-    // Staggered list items (Services)
-    ScrollTrigger.batch(".reveal-item", {
-        start: "top 86%",
-        once: true,
-        onEnter: (batch) => {
-            gsap.to(batch, {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.75,
-                ease: "power3.out",
-                stagger: 0.08
-            });
-        }
+    gsap.utils.toArray(".reveal-item").forEach((element) => {
+
+        gsap.set(element, {
+
+            autoAlpha: 0,
+
+            y: 28
+
+        });
+
+        gsap.to(element, {
+
+            autoAlpha: 1,
+
+            y: 0,
+
+            duration: .75,
+
+            ease: "power3.out",
+
+            scrollTrigger: {
+
+                trigger: element,
+
+                start: "top 88%",
+
+                once: true
+
+            }
+
+        });
+
     });
 
-    // Counters
     document.querySelectorAll(".stat-card strong").forEach((el) => {
+
         const raw = (el.textContent || "").trim();
+
         const digits = parseInt(raw.replace(/\D/g, ""), 10);
+
         if (!Number.isFinite(digits)) return;
+
         const suffix = raw.replace(/[0-9]/g, "");
 
         ScrollTrigger.create({
+
             trigger: el,
-            start: "top 86%",
+
+            start: "top 85%",
+
             once: true,
+
             onEnter: () => {
+
                 const obj = { value: 0 };
+
                 gsap.to(obj, {
+
                     value: digits,
+
                     duration: 1.2,
+
                     ease: "power2.out",
+
                     onUpdate: () => {
-                        el.textContent = `${Math.floor(obj.value)}${suffix}`;
+
+                        el.textContent = Math.floor(obj.value) + suffix;
+
                     }
+
                 });
+
             }
+
         });
+
     });
 
-    // Active section indicator
     document.querySelectorAll("section[id]").forEach((section) => {
-        const id = section.getAttribute("id");
-        if (!id) return;
-        const targets = document.querySelectorAll(`.desktop-nav a[href="#${id}"], .mobile-menu__panel a[href="#${id}"]`);
-        if (!targets.length) return;
+
+        const id = section.id;
+
+        const links = document.querySelectorAll(
+
+            `.desktop-nav a[href="#${id}"], .mobile-menu a[href="#${id}"]`
+
+        );
 
         ScrollTrigger.create({
+
             trigger: section,
+
             start: "top center",
+
             end: "bottom center",
-            onToggle: (self) => {
-                targets.forEach((a) => a.classList.toggle("is-active", self.isActive));
+
+            onToggle: self => {
+
+                links.forEach(link => {
+
+                    link.classList.toggle("is-active", self.isActive);
+
+                });
+
             }
+
         });
+
     });
+
 }
 
 function init() {
