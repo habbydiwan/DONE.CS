@@ -252,7 +252,10 @@ function init() {
     initLenis();
     initScrollAnimations();
 
-    window.addEventListener("scroll", updateHeaderState, { passive: true });
+    if (!lenis) {
+    window.addEventListener("scroll", updateHeaderState, {
+        passive: true
+    });
 }
 
 if (document.readyState === "loading") {
