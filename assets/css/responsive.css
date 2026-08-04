@@ -217,15 +217,73 @@
     width:42px;
     height:42px;
     padding:0;
+    position:relative;
+    z-index:10002;
+    touch-action:manipulation;
 }
 
 .navbar__logo{
     position:absolute;
-    left:50%;
+    left:50vw;
     top:50%;
     transform:translate(-50%,-50%);
     font-size:32px;
     line-height:1;
+    z-index:10001;
+}
+
+/* Mobile menu (open state) */
+.navbar.navbar--open{
+    background:rgba(9,9,9,.82);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar.navbar--open .navbar__left{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    position:fixed;
+    left:0;
+    right:0;
+    top:72px;
+    padding:28px 20px;
+    z-index:10000;
+}
+
+.navbar.navbar--open .navbar__right{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:0 20px 28px;
+    z-index:10000;
+}
+
+.navbar.navbar--open .navbar__right .btn{
+    width:100%;
+}
+
+.navbar.navbar--open .navbar__menu{
+    font-size:1rem;
+    letter-spacing:.12em;
+    color:rgba(255,255,255,.82);
+}
+
+.navbar.navbar--open .navbar__menu::after{
+    display:none;
+}
+
+.navbar.navbar--open .navbar__toggle span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+.navbar.navbar--open .navbar__toggle span:nth-child(2){
+    transform:translateY(-8px) rotate(-45deg);
 }
 
 /* =========================
@@ -354,17 +412,24 @@
 
 .footer__top{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
+    text-align:center;
 }
 
 .footer__bottom{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
+    text-align:center;
     gap:20px;
 }
 
 .footer__logo img{
     width:150px;
+    margin-inline:auto;
+}
+
+.footer__links{
+    justify-content:center;
 }
 
 /* =========================
@@ -417,8 +482,17 @@
     height:66px;
 }
 
+.navbar__toggle span{
+    background:#fff;
+}
+
 .navbar__logo{
     font-size:28px;
+}
+
+/* Mobile menu (open state) */
+.navbar.navbar--open .navbar__left{
+    top:66px;
 }
 
 /* HERO */
@@ -434,6 +508,19 @@
 .hero__description{
     max-width:100%;
     font-size:14px;
+}
+
+.hero__content{
+    text-align:center;
+    margin-inline:auto;
+}
+
+.hero__description{
+    margin-inline:auto;
+}
+
+.hero .flex{
+    justify-content:center;
 }
 
 .hero .btn{
