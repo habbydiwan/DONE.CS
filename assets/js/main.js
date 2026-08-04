@@ -107,12 +107,12 @@ function initLenis() {
     if (typeof Lenis === "undefined") return;
 
     lenis = new Lenis({
-        duration: 1.05,
-        smoothWheel: true,
-        wheelMultiplier: 0.9,
-        touchMultiplier: 1.2,
-        lerp: 0.08
-    });
+    duration: 0.6,
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1,
+    lerp: 0.15
+});
 
     function raf(time) {
         lenis.raf(time);
