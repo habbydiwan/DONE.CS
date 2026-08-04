@@ -1,0 +1,49 @@
+:root{
+    --bg:#090909;
+    --surface:#111111;
+    --surface-soft:#151515;
+    --surface-card:rgba(255,255,255,.04);
+    --text:#ffffff;
+    --text-soft:rgba(255,255,255,.65);
+    --text-muted:rgba(255,255,255,.40);
+    --border:rgba(255,255,255,.08);
+    --border-strong:rgba(255,255,255,.16);
+    /* Warm white (subtle) */
+    --accent:#fbf7f0;
+    --accent-soft:rgba(251,247,240,.12);
+    --shadow:0 24px 80px rgba(0,0,0,.35);
+
+    --font-heading:"Sora", sans-serif;
+    --font-body:"Inter", sans-serif;
+
+    --fw-900:900;
+    --fw-700:700;
+    --fw-500:500;
+    --fw-400:400;
+
+    --container:1200px;
+    --radius-sm:16px;
+    --radius-md:24px;
+    --radius-lg:36px;
+    --radius-full:999px;
+
+    --space-1:8px;
+    --space-2:16px;
+    --space-3:24px;
+    --space-4:32px;
+    --space-5:48px;
+    --space-6:64px;
+    --space-7:96px;
+    --space-8:120px;
+
+    --display:clamp(3.5rem, 9vw, 7rem);
+    --h2:clamp(2.25rem, 5vw, 4.5rem);
+    --h3:clamp(1.35rem, 3vw, 2rem);
+    --body-lg:clamp(1.05rem, 2vw, 1.2rem);
+    --body:1rem;
+    --small:.85rem;
+
+    --transition-fast:.22s cubic-bezier(.22,.61,.36,1);
+    --transition:.42s cubic-bezier(.22,.61,.36,1);
+    --transition-slow:.7s cubic-bezier(.22,.61,.36,1);
+}

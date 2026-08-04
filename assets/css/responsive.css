@@ -1,0 +1,147 @@
+@media (max-width:1024px){
+    .container{
+        width:min(calc(100% - 40px), var(--container));
+    }
+
+    .header__inner{
+        grid-template-columns:auto 1fr auto;
+    }
+
+    .desktop-nav,
+    .desktop-cta{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:inline-flex;
+    }
+
+    .brand{
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .section{
+        padding:96px 0;
+    }
+
+    .section-head,
+    .about-grid,
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid,
+    .work-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        width:min(calc(100% - 28px), var(--container));
+    }
+
+    .header__inner{
+        min-height:72px;
+    }
+
+    .mobile-menu__panel{
+        padding:84px 18px 24px;
+    }
+
+    .hero{
+        min-height:100svh;
+    }
+
+    .hero__content{
+        padding:124px 0 56px;
+        text-align:center;
+    }
+
+    .hero__lead{
+        margin-inline:auto;
+    }
+
+    .hero__actions{
+        justify-content:center;
+    }
+
+    .section,
+    .section--contact{
+        padding:82px 0;
+    }
+
+    .section-intro,
+    .section-head{
+        margin-bottom:40px;
+    }
+
+    .about-panel,
+    .contact-card,
+    .stat-card,
+    .team-card{
+        padding:22px;
+    }
+
+    .stats-grid,
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-item{
+        grid-template-columns:54px 1fr;
+        gap:18px;
+    }
+
+    .footer__logo{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .footer__links,
+    .footer__socials{
+        justify-content:center;
+    }
+
+    .footer__meta{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media (max-width:480px){
+    .brand{
+        font-size:1.75rem;
+    }
+
+    .button{
+        width:100%;
+    }
+
+    .hero__actions{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .service-item{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .service-item span{
+        font-size:.8rem;
+    }
+
+    .contact-card a,
+    .contact-card span{
+        font-size:1.05rem;
+        word-break:break-word;
+    }
+}
