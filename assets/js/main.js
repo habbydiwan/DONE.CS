@@ -3,6 +3,146 @@
    Main Frontend (GSAP + ScrollTrigger + Lenis)
 =========================================================== */
 
+/* ===================================
+PROJECT DATABASE
+=================================== */
+
+const projects={
+
+    farewell:{
+
+        title:"Farewell Film",
+
+        role:"Video Production • Editing • Color Grading",
+
+        year:"2025",
+
+        client:"Private Client",
+
+        video:"assets/videos/farewell.mp4",
+
+        story:`
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+`,
+
+        gallery:[
+
+            "assets/images/farewell-1.jpg",
+
+            "assets/images/farewell-2.jpg",
+
+            "assets/images/farewell-3.jpg"
+
+        ]
+
+    },
+
+   wedding:{
+
+        title:"Wedding Story",
+
+        role:"Video Production • Editing • Color Grading",
+
+        year:"2025",
+
+        client:"Private Client",
+
+        video:"assets/videos/farewell.mp4",
+
+        story:`
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+`,
+
+        gallery:[
+
+            "assets/images/farewell-1.jpg",
+
+            "assets/images/farewell-2.jpg",
+
+            "assets/images/farewell-3.jpg"
+
+        ]
+
+    },
+
+   coffee:{
+
+        title:"Local Coffee Brand",
+
+        role:"Social Media Management • Web Development",
+
+        year:"2025",
+
+        client:"Private Client",
+
+        video:"assets/videos/farewell.mp4",
+
+        story:`
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet.
+
+`,
+
+        gallery:[
+
+            "assets/images/farewell-1.jpg",
+
+            "assets/images/farewell-2.jpg",
+
+            "assets/images/farewell-3.jpg"
+
+        ]
+
+    },
+
+    restaurant:{
+
+        title:"Restaurant Website",
+
+        role:"UI Design • Web Development",
+
+        year:"2025",
+
+        client:"Restaurant",
+
+        video:"assets/videos/restaurant.mp4",
+
+        story:`
+
+Lorem ipsum...
+
+`,
+
+        gallery:[
+
+            "assets/images/r1.jpg",
+
+            "assets/images/r2.jpg",
+
+            "assets/images/r3.jpg"
+
+        ]
+
+    }
+
+};
+
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
