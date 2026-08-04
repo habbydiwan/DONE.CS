@@ -281,12 +281,15 @@ overflow-wrap:anywhere;
     /* ================= Footer ================= */
 
     .footer__logo{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
 
-        justify-content:center;
-
-        display:flex;
-
-    }
+.footer__logo img{
+    width:170px;
+    height:auto;
+}
 
     .footer__links,
 
