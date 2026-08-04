@@ -440,7 +440,7 @@ p{
     grid-template-columns:repeat(4, 1fr);
 }
 
-.stat-card,{
+.stat-card{
     padding:26px;
     border:1px solid var(--border);
     border-radius:var(--radius-md);
