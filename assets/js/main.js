@@ -22,8 +22,27 @@ function getScrollY() {
 }
 
 function updateHeaderState() {
-    const y = getScrollY();
-    header?.classList.toggle("is-scrolled", y > 24);
+
+    if (!header) return;
+
+    const hero = document.querySelector(".hero");
+
+    const heroHeight = hero ? hero.offsetHeight : window.innerHeight;
+
+    const progress = Math.min(window.scrollY / heroHeight, 1);
+
+    const blur = progress * 20;
+
+    const opacity = progress * 0.78;
+
+    header.style.backdropFilter = `blur(${blur}px)`;
+
+    header.style.webkitBackdropFilter = `blur(${blur}px)`;
+
+    header.style.background = `rgba(9,9,9,${opacity})`;
+
+    header.style.borderBottomColor = `rgba(255,255,255,${progress * 0.08})`;
+
 }
 
 function lockBodyScroll(locked) {
