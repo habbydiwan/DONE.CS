@@ -1,0 +1,219 @@
+@media (max-width:768px){
+
+/* =========================
+   GLOBAL
+========================= */
+
+.container{
+    width:calc(100% - 40px);
+}
+
+.section{
+    padding:90px 0;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.loader__content{
+    width:100%;
+    text-align:center;
+    padding:0 20px;
+}
+
+.loader__logo{
+    font-size:58px;
+    line-height:1;
+    margin-bottom:16px;
+}
+
+.loader p{
+    font-size:12px;
+    letter-spacing:.18em;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:72px;
+}
+
+.navbar__container{
+    position:relative;
+    height:72px;
+    display:flex;
+    align-items:center;
+}
+
+.navbar__left,
+.navbar__right{
+    display:none;
+}
+
+.navbar__toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    padding:0;
+}
+
+.navbar__logo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:32px;
+    line-height:1;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100svh;
+    min-height:100svh;
+}
+
+.hero__container{
+    padding-top:72px;
+}
+
+.hero__content{
+    max-width:100%;
+}
+
+.hero__title{
+    font-size:52px;
+    line-height:.95;
+}
+
+.hero__description{
+    max-width:340px;
+    font-size:15px;
+}
+
+.hero .flex{
+    flex-wrap:wrap;
+}
+
+.hero__scroll{
+    display:none;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about__grid{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.about__stats{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+/* =========================
+   WORKS
+========================= */
+
+.works__heading{
+    display:block;
+}
+
+.works__text{
+    margin-top:24px;
+}
+
+.works__list{
+    gap:70px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services__heading{
+    display:block;
+}
+
+.services__text{
+    margin-top:24px;
+}
+
+.service-item{
+    grid-template-columns:70px 1fr;
+    gap:20px;
+}
+
+.service-content{
+    display:block;
+}
+
+.service-content h3{
+    font-size:28px;
+}
+
+.service-content p{
+    margin-top:14px;
+}
+
+/* =========================
+   TEAM
+========================= */
+
+.team__heading{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.team__grid{
+    grid-template-columns:1fr;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact__grid{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.contact__item h3{
+    font-size:22px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer__top{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.footer__bottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.footer__logo img{
+    width:150px;
+}
+
+}
