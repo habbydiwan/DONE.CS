@@ -35,23 +35,17 @@ function initServices() {
         opacity: 0,
 
         duration: .8,
-
         ease: "power3.out"
-
+ 
     }, "-=.2");
 
-    tl.to(".service-item", {
-
-    opacity: 1,
-
-    y: 0,
-
-    stagger: .12,
-
-    duration: .55,
-
-    ease: "power3.out"
-
-});
+    // Smooth reveal for the list items
+    tl.from(".service-item", {
+        opacity: 0,
+        y: 24,
+        stagger: .10,
+        duration: .55,
+        ease: "power3.out"
+    }, "-=.15");
 
 }
