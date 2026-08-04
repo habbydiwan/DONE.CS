@@ -1,11 +1,14 @@
+/* ======================================================
+   TABLET
+====================================================== */
+
 @media (max-width:1024px){
+
     .container{
-        width:min(calc(100% - 40px), var(--container));
+        width:min(calc(100% - 40px),1200px);
     }
 
-    .header__inner{
-        grid-template-columns:auto 1fr auto;
-    }
+    /* ================= Header ================= */
 
     .desktop-nav,
     .desktop-cta{
@@ -13,7 +16,12 @@
     }
 
     .menu-toggle{
-        display:inline-flex;
+        display:flex;
+    }
+
+    .header__inner{
+        grid-template-columns:auto 1fr auto;
+        min-height:78px;
     }
 
     .brand{
@@ -22,126 +30,357 @@
         transform:translateX(-50%);
     }
 
-    .section{
-        padding:96px 0;
+    /* ================= Typography ================= */
+
+    h1{
+        max-width:12ch;
     }
 
-    .section-head,
-    .about-grid,
-    .contact-layout{
+    h2{
+        max-width:none;
+    }
+
+    /* ================= Hero ================= */
+
+    .hero__content{
+        padding:140px 0 80px;
+    }
+
+    .hero__lead{
+        max-width:620px;
+    }
+
+    /* ================= About ================= */
+
+    .about-grid{
         grid-template-columns:1fr;
+        gap:48px;
     }
 
-    .stats-grid,
-    .work-grid{
-        grid-template-columns:repeat(2, 1fr);
+    .about-copy{
+        gap:40px;
     }
+
+    .about-photo{
+        height:560px;
+    }
+
+    /* ================= Stats ================= */
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* ================= Work ================= */
+
+    .work-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    /* ================= Team ================= */
 
     .team-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
+
+    /* ================= Contact ================= */
+
+    .contact-layout{
+        grid-template-columns:1fr;
+        gap:48px;
+    }
+
+    /* ================= Footer ================= */
+
+    .footer__meta{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    /* ================= Modal ================= */
+
+    .project-modal__dialog{
+        width:min(900px,94vw);
+    }
+
 }
 
+/* ======================================================
+   MOBILE
+====================================================== */
+
 @media (max-width:768px){
+
     .container{
-        width:min(calc(100% - 28px), var(--container));
+        width:min(calc(100% - 28px),1200px);
+    }
+
+    .section{
+        padding:88px 0;
     }
 
     .header__inner{
         min-height:72px;
     }
 
-    .mobile-menu__panel{
-        padding:84px 18px 24px;
-    }
+    /* ================= Hero ================= */
 
     .hero{
         min-height:100svh;
     }
 
     .hero__content{
-        padding:124px 0 56px;
+
+        padding:120px 0 56px;
+
         text-align:center;
+
     }
 
     .hero__lead{
+
         margin-inline:auto;
+
     }
 
     .hero__actions{
+
         justify-content:center;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:16px;
+
     }
 
-    .section,
-    .section--contact{
-        padding:82px 0;
+    .hero__actions .button{
+
+        width:100%;
+
+        max-width:320px;
+
     }
 
-    .section-intro,
+    /* ================= Section ================= */
+
     .section-head{
-        margin-bottom:40px;
-    }
 
-    .about-panel,
-    .contact-card,
-    .stat-card,
-    .team-card{
-        padding:22px;
-    }
-
-    .stats-grid,
-    .work-grid{
         grid-template-columns:1fr;
+
+        gap:28px;
+
     }
+
+    .section-intro{
+
+        margin-bottom:28px;
+
+    }
+
+    /* ================= About ================= */
+
+    .about-grid{
+
+        gap:36px;
+
+    }
+
+    .about-photo{
+
+        height:420px;
+
+    }
+
+    /* ================= Stats ================= */
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stat-card{
+
+        padding:26px;
+
+    }
+
+    /* ================= Work ================= */
+
+    .work-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .work-card__body{
+
+        padding:22px;
+
+    }
+
+    /* ================= Services ================= */
 
     .service-item{
-        grid-template-columns:54px 1fr;
-        gap:18px;
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding:24px 0;
+
     }
 
+    /* ================= Team ================= */
+
+    .team-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .team-card{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+    .team-card__content{
+
+        padding:22px;
+
+    }
+
+    /* ================= Contact ================= */
+
+    .contact-card{
+
+        padding:26px;
+
+    }
+
+    /* ================= Footer ================= */
+
     .footer__logo{
-        width:100%;
-        display:flex;
+
         justify-content:center;
+
+        display:flex;
+
     }
 
     .footer__links,
+
     .footer__socials{
+
         justify-content:center;
+
     }
 
     .footer__meta{
-        flex-direction:column;
+
+        align-items:center;
+
         text-align:center;
+
     }
+
+    /* ================= Modal ================= */
+
+    .project-modal__dialog{
+
+        width:96vw;
+
+        max-height:100svh;
+
+        border-radius:22px;
+
+    }
+
+    .project-modal__content{
+
+        padding:24px;
+
+    }
+
+    .project-gallery{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
 }
 
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
 @media (max-width:480px){
+
+    .container{
+
+        width:min(calc(100% - 20px),1200px);
+
+    }
+
     .brand{
-        font-size:1.75rem;
+
+        font-size:1.7rem;
+
     }
 
-    .button{
-        width:100%;
+    h1{
+
+        font-size:clamp(2.8rem,12vw,4rem);
+
     }
 
-    .hero__actions{
-        flex-direction:column;
-        gap:14px;
+    h2{
+
+        font-size:clamp(2rem,8vw,2.8rem);
+
     }
 
-    .service-item{
+    .hero__lead{
+
+        font-size:1rem;
+
+    }
+
+    .about-photo{
+
+        height:340px;
+
+    }
+
+    .project-gallery{
+
         grid-template-columns:1fr;
-        gap:10px;
+
     }
 
-    .service-item span{
-        font-size:.8rem;
+    .project-meta{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
     }
 
     .contact-card a,
+
     .contact-card span{
-        font-size:1.05rem;
+
+        font-size:1rem;
+
         word-break:break-word;
+
     }
+
 }
