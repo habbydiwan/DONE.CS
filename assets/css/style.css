@@ -261,7 +261,6 @@ p{
 .mobile-menu__panel{
 
     position:absolute;
-
     inset:0;
 
     display:flex;
@@ -269,12 +268,11 @@ p{
 
     padding:96px 28px 32px;
 
-    background:rgba(9,9,9,.42);
+    background:#090909;      /* sebelumnya rgba(...) */
 
-    backdrop-filter:blur(24px);
-    -webkit-backdrop-filter:blur(24px);
-
-    will-change:backdrop-filter;
+    /* HAPUS */
+    /* backdrop-filter:blur(24px); */
+    /* -webkit-backdrop-filter:blur(24px); */
 
 }
 
