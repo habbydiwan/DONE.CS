@@ -367,13 +367,13 @@ p{
 
     display:grid;
 
-    grid-template-columns:1.05fr .95fr;
+    grid-template-columns:1.1fr .9fr;
 
-    gap:48px;
-
-    margin-bottom:48px;
+    gap:72px;
 
     align-items:stretch;
+
+    margin-bottom:56px;
 
 }
 
@@ -387,21 +387,23 @@ p{
 
 }
 
+.about-body{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
 .about-photo{
 
     position:relative;
 
     overflow:hidden;
 
-    border-radius:var(--radius-lg);
+    border-radius:24px;
 
     border:1px solid var(--border);
-
-    box-shadow:var(--shadow);
-
-    height:100%;
-
-    min-height:520px;
 
 }
 
@@ -411,11 +413,11 @@ p{
 
     height:100%;
 
+    display:block;
+
     object-fit:cover;
 
     object-position:center;
-
-    display:block;
 
 }
 
