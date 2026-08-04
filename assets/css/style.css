@@ -792,13 +792,13 @@ PROJECT MODAL
 
 .project-gallery{
 
-    margin-top:36px;
+    margin-top:42px;
 
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:16px;
+    gap:18px;
 
 }
 
@@ -806,13 +806,21 @@ PROJECT MODAL
 
     width:100%;
 
-    aspect-ratio:1;
+    aspect-ratio:4/3;
 
     object-fit:cover;
 
-    border-radius:16px;
+    border-radius:18px;
 
     cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.project-gallery img:hover{
+
+    transform:translateY(-4px);
 
 }
 
@@ -835,5 +843,47 @@ PROJECT MODAL
     color:#fff;
 
     z-index:5;
+
+}
+
+.project-meta{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:18px;
+
+}
+
+.project-meta span{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid var(--border);
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+.project-story{
+
+    margin-top:34px;
+
+    display:grid;
+
+    gap:18px;
+
+    line-height:1.9;
+
+    color:var(--text-secondary);
 
 }
