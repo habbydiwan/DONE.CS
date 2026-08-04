@@ -440,8 +440,7 @@ p{
     grid-template-columns:repeat(4, 1fr);
 }
 
-.stat-card,
-.team-card{
+.stat-card,{
     padding:26px;
     border:1px solid var(--border);
     border-radius:var(--radius-md);
@@ -461,6 +460,56 @@ p{
     text-transform:uppercase;
     letter-spacing:.08em;
     font-size:.78rem;
+}
+
+.team-card{
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    background:var(--surface-card);
+
+    transition:var(--transition);
+
+}
+
+.team-card__image{
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+.team-card__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+
+}
+
+.team-card__image img{
+
+    transition:transform .6s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.team-card:hover .team-card__image img{
+
+    transform:scale(1.04);
+
 }
 
 .work-grid{
