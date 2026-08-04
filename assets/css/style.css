@@ -215,6 +215,8 @@ p{
     height:2px;
     background:var(--text);
     transition:var(--transition);
+    position:relative;
+    z-index:1201;
 }
 
 .menu-toggle span:first-child{
