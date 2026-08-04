@@ -143,12 +143,13 @@ Lorem ipsum...
 
 };
 
+const body = document.body;
+
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuPanel = document.querySelector(".mobile-menu__panel");
 const yearTarget = document.querySelector("#year");
-const body = document.body;
 
 function setYear() {
     if (yearTarget) yearTarget.textContent = String(new Date().getFullYear());
@@ -228,11 +229,134 @@ function init(){
 
     initMenu();
 
+   initProjectModal();
+
     window.addEventListener("scroll",updateHeaderState,{
         passive:true
     });
 
     window.addEventListener("resize",updateHeaderState);
+
+}
+
+function initProjectModal() {
+
+    const projectModal = document.querySelector("#projectModal");
+
+    const modalVideo = document.querySelector("#modalVideo");
+
+    const modalTitle = document.querySelector("#modalTitle");
+
+    const modalRole = document.querySelector("#modalRole");
+
+    const modalYear = document.querySelector("#modalYear");
+
+    const modalClient = document.querySelector("#modalClient");
+
+    const modalStory = document.querySelector("#modalStory");
+
+    const modalGallery = document.querySelector("#modalGallery");
+
+    const closeProject = document.querySelector("#closeProject");
+
+    if (
+        !projectModal ||
+        !modalVideo ||
+        !closeProject
+    ) return;
+
+    document.querySelectorAll(".work-card").forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const project = projects[card.dataset.project];
+
+            if (!project) return;
+
+            modalTitle.textContent = project.title;
+
+            modalRole.textContent = project.role;
+
+            modalYear.textContent = project.year;
+
+            modalClient.textContent = project.client;
+
+            modalStory.innerHTML = "";
+
+            project.story
+                .trim()
+                .split("\n\n")
+                .forEach(text => {
+
+                    const p = document.createElement("p");
+
+                    p.textContent = text.trim();
+
+                    modalStory.appendChild(p);
+
+                });
+
+            modalGallery.innerHTML = "";
+
+            project.gallery.forEach(src => {
+
+                const img = document.createElement("img");
+
+                img.src = src;
+
+                img.loading = "lazy";
+
+                modalGallery.appendChild(img);
+
+            });
+
+            modalVideo.pause();
+
+            modalVideo.src = project.video;
+
+            modalVideo.load();
+
+            modalVideo.play().catch(()=>{});
+
+            projectModal.classList.add("is-open");
+
+            body.classList.add("menu-open");
+
+        });
+
+    });
+
+    function closeModal(){
+
+        projectModal.classList.remove("is-open");
+
+        body.classList.remove("menu-open");
+
+        modalVideo.pause();
+
+        modalVideo.currentTime = 0;
+
+        modalVideo.removeAttribute("src");
+
+        modalVideo.load();
+
+    }
+
+    closeProject.addEventListener("click", closeModal);
+
+    projectModal
+        .querySelector(".project-modal__backdrop")
+        .addEventListener("click", closeModal);
+
+    window.addEventListener("keydown", e => {
+
+        if (e.key === "Escape") {
+
+            closeModal();
+
+        }
+
+    });
 
 }
 
@@ -243,98 +367,4 @@ if (document.readyState === "loading") {
     init();
 }
 
-   window.addEventListener("resize", updateHeaderState);
-
-const projectModal=document.querySelector("#projectModal");
-
-const modalVideo=document.querySelector("#modalVideo");
-
-const modalTitle=document.querySelector("#modalTitle");
-
-const modalYear=document.querySelector("#modalYear");
-
-const modalClient=document.querySelector("#modalClient");
-
-const modalRole=document.querySelector("#modalRole");
-
-const modalStory=document.querySelector("#modalStory");
-
-const modalGallery=document.querySelector("#modalGallery");
-
-const closeProject=document.querySelector("#closeProject");
-
-document.querySelectorAll(".work-card").forEach(card=>{
-
-    card.addEventListener("click",()=>{
-
-        const key=card.dataset.project;
-
-        const project=projects[key];
-
-        if(!project)return;
-
-        modalTitle.textContent=project.title;
-
-        modalRole.textContent=project.role;
-
-        modalYear.textContent=project.year;
-
-        modalClient.textContent=project.client;
-
-        modalStory.innerHTML=`<p>${project.story}</p>`;
-
-        modalVideo.src=project.video;
-
-        modalGallery.innerHTML="";
-
-        project.gallery.forEach(src=>{
-
-            const img=document.createElement("img");
-
-            img.src=src;
-
-            img.loading="lazy";
-
-            modalGallery.appendChild(img);
-
-        });
-
-        projectModal.classList.add("is-open");
-
-        body.classList.add("menu-open");
-
-        modalVideo.load();
-
-        modalVideo.play();
-
-    });
-
-});
-
-closeProject.addEventListener("click",()=>{
-
-projectModal.classList.remove("is-open");
-
-document.body.classList.remove("menu-open");
-
-modalVideo.pause();
-
-});
-
-document
-.querySelector(".project-modal__backdrop")
-.addEventListener("click",()=>{
-
-closeProject.click();
-
-});
-
-window.addEventListener("keydown",(e)=>{
-
-if(e.key==="Escape"){
-
-closeProject.click();
-
-}
-
-});
+   
