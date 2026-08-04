@@ -15,10 +15,6 @@ body.menu-open{
     overflow:hidden;
 }
 
-body.is-loading{
-    overflow:hidden;
-}
-
 
 .container{
     width:min(calc(100% - 48px), var(--container));
