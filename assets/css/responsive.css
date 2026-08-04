@@ -25,10 +25,14 @@
     }
 
     .brand{
-        position:absolute;
-        left:50%;
-        transform:translateX(-50%);
-    }
+
+position:static;
+
+transform:none;
+
+justify-self:center;
+
+}
 
     /* ================= Typography ================= */
 
@@ -53,16 +57,21 @@
     /* ================= About ================= */
 
     .about-grid{
-        grid-template-columns:1fr;
-        gap:48px;
-    }
+
+display:flex;
+
+flex-direction:column;
+
+gap:36px;
+
+}
 
     .about-copy{
         gap:40px;
     }
 
     .about-photo{
-        height:560px;
+        aspect-ratio:16/10;
     }
 
     /* ================= Stats ================= */
@@ -135,13 +144,11 @@
 
         padding:120px 0 56px;
 
-        text-align:center;
+        text-align:left;
 
     }
 
     .hero__lead{
-
-        margin-inline:auto;
 
     }
 
@@ -191,7 +198,7 @@
 
     .about-photo{
 
-        height:420px;
+        aspect-ratio:4/3;
 
     }
 
@@ -245,9 +252,7 @@
 
     .team-card{
 
-        max-width:520px;
-
-        margin:auto;
+        width:100%;
 
     }
 
@@ -264,6 +269,14 @@
         padding:26px;
 
     }
+
+   .contact-card a{
+
+font-size:1rem;
+
+overflow-wrap:anywhere;
+
+}
 
     /* ================= Footer ================= */
 
@@ -290,6 +303,16 @@
         text-align:center;
 
     }
+
+   .footer__links{
+
+flex-direction:column;
+
+gap:14px;
+
+align-items:center;
+
+}
 
     /* ================= Modal ================= */
 
@@ -355,7 +378,7 @@
 
     .about-photo{
 
-        height:340px;
+        aspect-ratio:4/3;
 
     }
 
