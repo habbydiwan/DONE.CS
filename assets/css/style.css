@@ -234,15 +234,19 @@ p{
 }
 
 .mobile-menu{
+
     position:fixed;
+
     inset:0;
-    background:rgba(9,9,9,.86);
-    backdrop-filter:blur(22px);
-    -webkit-backdrop-filter:blur(22px);
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-    transition:var(--transition);
+
+    z-index:999;
+
+    background:rgba(9,9,9,.45);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
 }
 
 .mobile-menu.is-open{
@@ -256,8 +260,9 @@ p{
 }
 
 .mobile-menu__panel{
-    position:absolute;
+    position:relative;
     inset:0;
+    z-index:2;
     padding:clamp(84px, 10vh, 120px) 24px 28px;
     display:flex;
     flex-direction:column;
