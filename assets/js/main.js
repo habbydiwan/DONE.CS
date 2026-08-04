@@ -148,7 +148,6 @@ const body = document.body;
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
-const mobileMenuPanel = document.querySelector(".mobile-menu__panel");
 const yearTarget = document.querySelector("#year");
 
 function setYear() {
