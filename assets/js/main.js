@@ -250,6 +250,10 @@ const modalVideo=document.querySelector("#modalVideo");
 
 const modalTitle=document.querySelector("#modalTitle");
 
+const modalYear=document.querySelector("#modalYear");
+
+const modalClient=document.querySelector("#modalClient");
+
 const modalRole=document.querySelector("#modalRole");
 
 const modalStory=document.querySelector("#modalStory");
@@ -260,41 +264,49 @@ const closeProject=document.querySelector("#closeProject");
 
 document.querySelectorAll(".work-card").forEach(card=>{
 
-card.addEventListener("click",()=>{
+    card.addEventListener("click",()=>{
 
-modalTitle.textContent=card.dataset.title;
+        const key=card.dataset.project;
 
-modalRole.textContent=card.dataset.role;
+        const project=projects[key];
 
-modalStory.textContent=card.dataset.story;
+        if(!project)return;
 
-modalVideo.src=card.dataset.video;
+        modalTitle.textContent=project.title;
 
-modalGallery.innerHTML="";
+        modalRole.textContent=project.role;
 
-[
-card.dataset.gallery1,
-card.dataset.gallery2,
-card.dataset.gallery3
-].forEach(src=>{
+        modalYear.textContent=project.year;
 
-if(!src)return;
+        modalClient.textContent=project.client;
 
-const img=document.createElement("img");
+        modalStory.innerHTML=`<p>${project.story}</p>`;
 
-img.src=src;
+        modalVideo.src=project.video;
 
-modalGallery.appendChild(img);
+        modalGallery.innerHTML="";
 
-});
+        project.gallery.forEach(src=>{
 
-projectModal.classList.add("is-open");
+            const img=document.createElement("img");
 
-document.body.classList.add("menu-open");
+            img.src=src;
 
-modalVideo.play();
+            img.loading="lazy";
 
-});
+            modalGallery.appendChild(img);
+
+        });
+
+        projectModal.classList.add("is-open");
+
+        body.classList.add("menu-open");
+
+        modalVideo.load();
+
+        modalVideo.play();
+
+    });
 
 });
 
