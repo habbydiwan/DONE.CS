@@ -103,3 +103,57 @@ if (document.readyState === "loading") {
 }
 
    window.addEventListener("resize", updateHeaderState);
+
+const projectModal=document.querySelector("#projectModal");
+
+const modalVideo=document.querySelector("#modalVideo");
+
+const modalTitle=document.querySelector("#modalTitle");
+
+const modalRole=document.querySelector("#modalRole");
+
+const modalStory=document.querySelector("#modalStory");
+
+const modalGallery=document.querySelector("#modalGallery");
+
+const closeProject=document.querySelector("#closeProject");
+
+document.querySelectorAll(".work-card").forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+modalTitle.textContent=card.dataset.title;
+
+modalRole.textContent=card.dataset.role;
+
+modalStory.textContent=card.dataset.story;
+
+modalVideo.src=card.dataset.video;
+
+modalGallery.innerHTML="";
+
+[
+card.dataset.gallery1,
+card.dataset.gallery2,
+card.dataset.gallery3
+].forEach(src=>{
+
+if(!src)return;
+
+const img=document.createElement("img");
+
+img.src=src;
+
+modalGallery.appendChild(img);
+
+});
+
+projectModal.classList.add("is-open");
+
+document.body.classList.add("menu-open");
+
+modalVideo.play();
+
+});
+
+});
