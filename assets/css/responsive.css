@@ -16,21 +16,34 @@
     }
 
     .menu-toggle{
-        display:flex;
-    }
+
+    position:relative;
+
+    z-index:10;
+
+}
 
     .header__inner{
-        grid-template-columns:auto 1fr auto;
-        min-height:78px;
-    }
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    min-height:72px;
+
+}
 
     .brand{
 
-position:static;
+    position:absolute;
 
-transform:none;
+    left:50%;
 
-justify-self:center;
+    transform:translateX(-50%);
 
 }
 
