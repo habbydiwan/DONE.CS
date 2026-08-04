@@ -22,7 +22,6 @@ function setYear() {
 }
 
 function getScrollY() {
-    if (lenis && typeof lenis.scroll === "number") return lenis.scroll;
     return window.scrollY || 0;
 }
 
@@ -126,7 +125,13 @@ function initLoader() {
         .to([logo, tagline], { autoAlpha: 0, y: -10, filter: "blur(8px)", duration: 0.6 }, "+=0.35")
         .to(loader, { autoAlpha: 0, duration: 0.55, ease: "power2.inOut" }, "-=0.15")
         .set(loader, { display: "none" })
-        .add(() => document.body.classList.remove("is-loading"));
+        .add(() => {
+
+    document.body.classList.remove("is-loading");
+
+    ScrollTrigger.refresh();
+
+});
 }
 
 function initScrollAnimations() {
@@ -220,8 +225,9 @@ function init() {
     updateHeaderState();
     initLoader();
     initMenu();
-    initLenis();
     initScrollAnimations();
+
+   ScrollTrigger.refresh();
 
     if (!lenis) {
     window.addEventListener("scroll", updateHeaderState, {
