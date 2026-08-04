@@ -3,8 +3,6 @@
    Main Frontend (GSAP + ScrollTrigger + Lenis)
 =========================================================== */
 
-document.documentElement.classList.add("js");
-
 const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
 
 const header = document.querySelector(".site-header");
