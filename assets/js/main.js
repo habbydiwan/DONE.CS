@@ -15,7 +15,6 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuPanel = document.querySelector(".mobile-menu__panel");
 const yearTarget = document.querySelector("#year");
 
-let lenis = null;
 let menuTl = null;
 
 function setYear() {
@@ -100,34 +99,6 @@ function initMenu() {
     window.addEventListener("resize", () => {
         if (window.innerWidth > 1024) closeMenu();
     });
-}
-
-function initLenis() {
-    if (prefersReducedMotion) return;
-    if (typeof Lenis === "undefined") return;
-
-    lenis = new Lenis({
-    duration: 0.6,
-    smoothWheel: true,
-    wheelMultiplier: 1,
-    touchMultiplier: 1,
-    lerp: 0.15
-});
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Keep ScrollTrigger synced with Lenis
-    lenis.on("scroll", () => {
-        updateHeaderState();
-        ScrollTrigger?.update?.();
-    });
-
-    ScrollTrigger?.addEventListener?.("refresh", () => lenis?.resize?.());
 }
 
 function initLoader() {
