@@ -1,3 +1,154 @@
+/* ===========================================================
+   Responsive
+
+   Breakpoints (max-width):
+   - 1024px: Tablet (landscape + small laptops)
+   - 768px:  Tablet portrait + large phones
+   - 480px:  Small phones
+=========================================================== */
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:1024px){
+
+/* GLOBAL */
+.container{
+    width:calc(100% - 56px);
+}
+
+.section{
+    padding:120px 0;
+}
+
+/* HERO */
+.hero{
+    min-height:680px;
+}
+
+.hero__container{
+    padding-top:88px;
+}
+
+.hero__title{
+    font-size:clamp(54px,6vw,72px);
+    line-height:.98;
+}
+
+/* ABOUT */
+.about{
+    padding:150px 0;
+}
+
+.about__grid{
+    gap:80px;
+    margin-top:64px;
+}
+
+.about__title{
+    margin-bottom:28px;
+}
+
+.about__stats{
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    margin-top:90px;
+    padding-top:44px;
+}
+
+/* WORKS */
+.works{
+    padding:150px 0;
+}
+
+.works__heading{
+    display:block;
+    margin:56px 0 70px;
+}
+
+.works__text{
+    margin-top:22px;
+    max-width:520px;
+}
+
+.works__list{
+    gap:90px;
+}
+
+.work-card__content h3{
+    font-size:32px;
+}
+
+/* SERVICES */
+.services{
+    padding:150px 0;
+}
+
+.services__heading{
+    display:block;
+    margin:56px 0 80px;
+}
+
+.services__text{
+    margin-top:22px;
+    max-width:520px;
+}
+
+.service-item{
+    grid-template-columns:80px 1fr;
+    gap:28px;
+    padding:40px 0;
+}
+
+.service-content{
+    gap:40px;
+}
+
+.service-content h3{
+    font-size:34px;
+}
+
+/* TEAM */
+.team{
+    padding:150px 0;
+}
+
+.team__heading{
+    gap:60px;
+}
+
+.team__grid{
+    margin-top:90px;
+    grid-template-columns:repeat(2,1fr);
+    gap:34px;
+}
+
+/* CONTACT */
+.contact{
+    padding:160px 0;
+}
+
+.contact__grid{
+    grid-template-columns:1fr;
+    gap:70px;
+}
+
+.contact__right{
+    gap:34px;
+}
+
+/* FOOTER */
+.footer__top{
+    gap:40px;
+}
+
+}
+
+/* =========================
+   TABLET + MOBILE
+========================= */
+
 @media (max-width:768px){
 
 /* =========================
@@ -214,6 +365,146 @@
 
 .footer__logo img{
     width:150px;
+}
+
+/* =========================
+   PROJECT MODAL
+========================= */
+
+.project-modal__wrapper{
+    width:calc(100% - 32px);
+    padding:22px;
+}
+
+.project-modal__close{
+    right:16px;
+    top:16px;
+    font-size:20px;
+}
+
+.project-modal__content{
+    grid-template-columns:1fr;
+    gap:22px;
+}
+
+.project-modal__info h2{
+    font-size:34px;
+}
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+/* GLOBAL */
+.container{
+    width:calc(100% - 28px);
+}
+
+.section{
+    padding:78px 0;
+}
+
+/* NAVBAR */
+.navbar{
+    height:66px;
+}
+
+.navbar__container{
+    height:66px;
+}
+
+.navbar__logo{
+    font-size:28px;
+}
+
+/* HERO */
+.hero__container{
+    padding-top:66px;
+}
+
+.hero__title{
+    font-size:42px;
+    line-height:.96;
+}
+
+.hero__description{
+    max-width:100%;
+    font-size:14px;
+}
+
+.hero .btn{
+    width:100%;
+}
+
+/* ABOUT */
+.about__grid{
+    gap:44px;
+}
+
+.about__title{
+    font-size:44px;
+    line-height:1.03;
+}
+
+/* WORKS */
+.works__list{
+    gap:56px;
+}
+
+.work-card__content{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.work-card__meta{
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+/* SERVICES */
+.service-item{
+    grid-template-columns:54px 1fr;
+    gap:16px;
+}
+
+.service-content h3{
+    font-size:26px;
+}
+
+/* TEAM */
+.team__title{
+    font-size:46px;
+}
+
+.team-card h3{
+    font-size:24px;
+}
+
+/* CONTACT */
+.contact__title{
+    font-size:52px;
+}
+
+.contact__text{
+    margin:26px 0;
+}
+
+.contact__item h3{
+    font-size:20px;
+}
+
+/* PROJECT MODAL */
+.project-modal__wrapper{
+    padding:18px;
+}
+
+.project-modal__info h2{
+    font-size:28px;
 }
 
 }
