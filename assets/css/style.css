@@ -239,21 +239,10 @@ p{
     inset:0;
 
     display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    background:rgba(9,9,9,.45);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
 
     opacity:0;
     visibility:hidden;
     pointer-events:none;
-
-    transition:
-        opacity .3s ease,
-        visibility .3s ease;
 
     z-index:999;
 
@@ -270,14 +259,21 @@ p{
 }
 
 .mobile-menu__panel{
-    position:relative;
+
+    position:absolute;
+
     inset:0;
-    z-index:2;
-    padding:clamp(84px, 10vh, 120px) 24px 28px;
+
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
-    gap:14px;
+
+    padding:96px 28px 32px;
+
+    background:rgba(9,9,9,.82);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
 }
 
 .mobile-menu__panel a:not(.button){
