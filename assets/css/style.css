@@ -19,43 +19,6 @@ body.is-loading{
     overflow:hidden;
 }
 
-/* =========================
-   Loader
-========================= */
-
-.loader{
-    position:fixed;
-    inset:0;
-    background:var(--bg);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:5000;
-    opacity:1;
-    pointer-events:auto;
-}
-
-.loader__inner{
-    text-align:center;
-    transform:translateZ(0);
-    will-change:transform,opacity,filter;
-}
-
-.loader__logo{
-    font-family:var(--font-heading);
-    font-weight:var(--fw-900);
-    font-size:clamp(3.25rem, 7vw, 4.5rem);
-    letter-spacing:-.06em;
-    line-height:1;
-}
-
-.loader__tagline{
-    margin-top:14px;
-    color:var(--text-soft);
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    font-size:.78rem;
-}
 
 .container{
     width:min(calc(100% - 48px), var(--container));
