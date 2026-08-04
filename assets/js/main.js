@@ -4,12 +4,10 @@
 =========================================================== */
 
 document.documentElement.classList.add("js");
-document.body.classList.add("is-loading");
 
 const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
 
 const header = document.querySelector(".site-header");
-const loader = document.querySelector(".loader");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuPanel = document.querySelector(".mobile-menu__panel");
@@ -98,40 +96,6 @@ function initMenu() {
     window.addEventListener("resize", () => {
         if (window.innerWidth > 1024) closeMenu();
     });
-}
-
-function initLoader() {
-    if (!loader) {
-        document.body.classList.remove("is-loading");
-        return;
-    }
-    if (prefersReducedMotion || typeof gsap === "undefined") {
-        loader.style.display = "none";
-        document.body.classList.remove("is-loading");
-        return;
-    }
-
-    const logo = loader.querySelector(".loader__logo");
-    const tagline = loader.querySelector(".loader__tagline");
-
-    const tl = gsap.timeline({
-        defaults: { ease: "power3.out" }
-    });
-
-    tl.set([logo, tagline], { autoAlpha: 0, y: 14, filter: "blur(10px)" })
-        .to(logo, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.9 }, 0.15)
-        .to(tagline, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.75 }, 0.35)
-        .to({}, { duration: 0.35 }) // beat
-        .to([logo, tagline], { autoAlpha: 0, y: -10, filter: "blur(8px)", duration: 0.6 }, "+=0.35")
-        .to(loader, { autoAlpha: 0, duration: 0.55, ease: "power2.inOut" }, "-=0.15")
-        .set(loader, { display: "none" })
-        .add(() => {
-
-    document.body.classList.remove("is-loading");
-
-    ScrollTrigger.refresh();
-
-});
 }
 
 function initScrollAnimations() {
@@ -303,7 +267,6 @@ function init() {
 
     setYear();
     updateHeaderState();
-    initLoader();
     initMenu();
     initScrollAnimations();
 
