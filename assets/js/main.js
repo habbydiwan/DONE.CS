@@ -71,7 +71,7 @@ Lorem ipsum dolor sit amet.
 
             "assets/images/padel2.jpg",
 
-            "assets/images/padel-3.jpg"
+            "assets/images/padel3.jpg"
 
         ]
 
