@@ -53,11 +53,7 @@ As the video producer behind this project, our agency crafted a vibrant personal
 
         story:`
 
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
+DONE. Creative Studio stepped in as Social Media Manager for Padel People (@padelpeople.medan) to build a vibrant online presence. By producing a blend of high-energy Reels and sleek carousels, we showcase court culture, court features, and player excitement, ensuring the brand stays top of mind for fitness and sports enthusiasts across Medan.
 
 `,
 
