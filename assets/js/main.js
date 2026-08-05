@@ -33,9 +33,13 @@ As the video producer behind this project, DONE. Creative Studio crafted a vibra
 
             "assets/images/vaarent2.jpg",
 
-            "assets/images/vaarent3.jpg"
+            "assets/images/vaarent3.jpg",
 
-        ]
+        ],
+
+       drive:"https://www.instagram.com/reel/DQI6UIDEkZH/?igsh=MW5pc3FweXRyMWNuag=="
+
+       
 
     },
 
@@ -65,7 +69,9 @@ DONE. Creative Studio stepped in as Social Media Manager for Padel People (@pade
 
             "assets/images/padel3.jpg"
 
-        ]
+        ],
+
+      drive:"https://www.instagram.com/reel/DITaZjYvfak/?igsh=MTNza2dwajJ1ZXlrbA=="
 
     },
 
@@ -129,7 +135,9 @@ As the Web Developer and Brand Identity lead for UNLOCKD+ (@unlockdplus), DONE. 
 
             "assets/images/unlockd3.png"
 
-        ]
+        ],
+
+       drive:"https://unlockd-plus.vercel.app/"
 
     }
 
@@ -267,6 +275,8 @@ function initProjectModal() {
     const modalStory = document.querySelector("#modalStory");
 
     const modalGallery = document.querySelector("#modalGallery");
+   
+    const fullPreview = document.querySelector("#fullPreview");
 
     const closeProject = document.querySelector("#closeProject");
 
@@ -291,6 +301,8 @@ function initProjectModal() {
             modalYear.textContent = project.year;
 
             modalClient.textContent = project.client;
+
+            fullPreview.href = project.drive;
 
             modalStory.innerHTML = "";
 
