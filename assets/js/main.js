@@ -123,11 +123,11 @@ As the Web Developer and Brand Identity lead for UNLOCKD+ (@unlockdplus), our ag
 
         gallery:[
 
-            "assets/images/unlockd1.jpg",
+            "assets/images/unlockd1.png",
 
-            "assets/images/unlockd2.jpg",
+            "assets/images/unlockd2.png",
 
-            "assets/images/unlockd3.jpg"
+            "assets/images/unlockd3.png"
 
         ]
 
