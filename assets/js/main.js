@@ -9,17 +9,17 @@ PROJECT DATABASE
 
 const projects={
 
-    farewell:{
+    vaarent:{
 
-        title:"Farewell Film",
+        title:"Vaarent もう一度だけ、あなたを抱きしめてもいい？",
 
         role:"Video Production • Editing • Color Grading",
 
         year:"2025",
 
-        client:"Private Client",
+        client:"@akmh_vaarent",
 
-        video:"assets/videos/farewell.mp4",
+        video:"assets/videos/vaarent.mp4",
 
         story:`
 
@@ -33,11 +33,11 @@ Lorem ipsum dolor sit amet.
 
         gallery:[
 
-            "assets/images/farewell-1.jpg",
+            "assets/images/vaarent1.jpg",
 
-            "assets/images/farewell-2.jpg",
+            "assets/images/vaarent2.jpg",
 
-            "assets/images/farewell-3.jpg"
+            "assets/images/vaarent3.jpg"
 
         ]
 
