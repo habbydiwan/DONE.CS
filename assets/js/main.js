@@ -148,6 +148,7 @@ const body = document.body;
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
+const mobileClose = document.querySelector(".mobile-menu__close");
 const yearTarget = document.querySelector("#year");
 
 function setYear() {
@@ -201,6 +202,25 @@ function initMenu() {
         document.body.classList.toggle("menu-open", opened);
 
     });
+
+   if(mobileClose){
+
+    mobileClose.addEventListener("click",()=>{
+
+        mobileMenu.classList.remove("is-open");
+
+        menuToggle.classList.remove("is-active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        document.body.classList.remove("menu-open");
+
+    });
+
+}
 
     mobileMenu.querySelectorAll("a").forEach(link=>{
 
