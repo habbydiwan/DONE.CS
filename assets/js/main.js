@@ -103,17 +103,17 @@ Lorem ipsum dolor sit amet.
 
     },
 
-    restaurant:{
+    unlockd:{
 
-        title:"Restaurant Website",
+        title:"UNLOCKD+ 'Unlock Your Premium Apps'",
 
         role:"UI Design • Web Development",
 
-        year:"2025",
+        year:"2026",
 
-        client:"Restaurant",
+        client:"UNLOCKD+",
 
-        video:"assets/videos/restaurant.mp4",
+        video:"assets/videos/unlockd.mp4",
 
         story:`
 
@@ -123,11 +123,11 @@ Lorem ipsum...
 
         gallery:[
 
-            "assets/images/r1.jpg",
+            "assets/images/unlockd1.jpg",
 
-            "assets/images/r2.jpg",
+            "assets/images/unlockd2.jpg",
 
-            "assets/images/r3.jpg"
+            "assets/images/unlockd3.jpg"
 
         ]
 
