@@ -275,6 +275,12 @@ function initProjectModal() {
     const modalStory = document.querySelector("#modalStory");
 
     const modalGallery = document.querySelector("#modalGallery");
+
+    const imagePreview = document.querySelector("#imagePreview");
+
+    const previewImage = document.querySelector("#previewImage");
+
+    const closePreview = document.querySelector("#closePreview");
    
     const fullPreview = document.querySelector("#fullPreview");
 
@@ -323,13 +329,21 @@ function initProjectModal() {
 
             project.gallery.forEach(src => {
 
-                const img = document.createElement("img");
+                const img=document.createElement("img");
 
-                img.src = src;
+img.src=src;
 
-                img.loading = "lazy";
+img.loading="lazy";
 
-                modalGallery.appendChild(img);
+img.addEventListener("click",()=>{
+
+    previewImage.src=src;
+
+    imagePreview.classList.add("is-open");
+
+});
+
+modalGallery.appendChild(img);
 
             });
 
@@ -380,6 +394,34 @@ function initProjectModal() {
         }
 
     });
+
+   function closeImage(){
+
+    imagePreview.classList.remove("is-open");
+
+    previewImage.src="";
+
+}
+
+closePreview.addEventListener(
+
+    "click",
+
+    closeImage
+
+);
+
+imagePreview
+
+.querySelector(".image-preview__backdrop")
+
+.addEventListener(
+
+    "click",
+
+    closeImage
+
+);
 
 }
 
