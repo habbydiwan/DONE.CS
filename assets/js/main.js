@@ -107,7 +107,7 @@ Lorem ipsum dolor sit amet.
 
         title:"UNLOCKD+ 'Unlock Your Premium Apps'",
 
-        role:"UI Design • Web Development",
+        role:"Brand Identity • Web Development",
 
         year:"2026",
 
@@ -117,7 +117,7 @@ Lorem ipsum dolor sit amet.
 
         story:`
 
-Lorem ipsum...
+As the Web Developer and Brand Identity lead for UNLOCKD+ (@unlockdplus), our agency built a high-converting, user-friendly website designed to make digital product purchases seamless. Beyond web development, we crafted the core brand identity, including a sleek new logo and foundational visual guidelines, ensuring a cohesive and premium digital experience that drives real results.
 
 `,
 
