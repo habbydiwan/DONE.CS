@@ -323,6 +323,22 @@ p{
 
 }
 
+.mobile-menu__close{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.mobile-menu.is-open .mobile-menu__close{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
 .mobile-menu.is-open{
 
     display:block;
