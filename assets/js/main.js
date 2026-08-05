@@ -23,11 +23,7 @@ const projects={
 
         story:`
 
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
+As the video producer behind this project, our agency crafted a vibrant personal branding video for Vaarent (@akmh_vaarent) from Akemihana. From concept to execution, we focused on capturing her playful J-pop idol energy and Japanese aesthetic, delivering a sleek, engaging promo reel tailored to build her personal brand and amplify her presence in the local pop-culture scene.
 
 `,
 
