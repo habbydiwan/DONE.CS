@@ -283,6 +283,46 @@ p{
 
 }
 
+.mobile-menu__close{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    font-size:2rem;
+
+    line-height:1;
+
+    z-index:1200;
+
+    transition:.25s ease;
+
+}
+
+.mobile-menu__close:hover{
+
+    opacity:.7;
+
+}
+
 .mobile-menu.is-open{
 
     display:block;
