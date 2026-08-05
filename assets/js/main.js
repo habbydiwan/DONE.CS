@@ -23,7 +23,7 @@ const projects={
 
         story:`
 
-As the video producer behind this project, our agency crafted a vibrant personal branding video for Vaarent (@akmh_vaarent) from Akemihana. From concept to execution, we focused on capturing her playful J-pop idol energy and Japanese aesthetic, delivering a sleek, engaging promo reel tailored to build her personal brand and amplify her presence in the local pop-culture scene.
+As the video producer behind this project, DONE. Creative Studio crafted a vibrant personal branding video for Vaarent (@akmh_vaarent) from Akemihana. From concept to execution, we focused on capturing her playful J-pop idol energy and Japanese aesthetic, delivering a sleek, engaging promo reel tailored to build her personal brand and amplify her presence in the local pop-culture scene.
 
 `,
 
@@ -117,7 +117,7 @@ Lorem ipsum dolor sit amet.
 
         story:`
 
-As the Web Developer and Brand Identity lead for UNLOCKD+ (@unlockdplus), our agency built a high-converting, user-friendly website designed to make digital product purchases seamless. Beyond web development, we crafted the core brand identity, including a sleek new logo and foundational visual guidelines, ensuring a cohesive and premium digital experience that drives real results.
+As the Web Developer and Brand Identity lead for UNLOCKD+ (@unlockdplus), DONE. Creative Studio built a high-converting, user-friendly website designed to make digital product purchases seamless. Beyond web development, we crafted the core brand identity, including a sleek new logo and foundational visual guidelines, ensuring a cohesive and premium digital experience that drives real results.
 
 `,
 
