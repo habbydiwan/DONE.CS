@@ -43,17 +43,17 @@ Lorem ipsum dolor sit amet.
 
     },
 
-   wedding:{
+   padel:{
 
-        title:"Wedding Story",
+        title:"Padel People",
 
-        role:"Video Production • Editing • Color Grading",
+        role:"Social Media Management • Editing",
 
-        year:"2025",
+        year:"2026",
 
-        client:"Private Client",
+        client:"Padel People",
 
-        video:"assets/videos/farewell.mp4",
+        video:"assets/videos/padelpeople.mp4",
 
         story:`
 
@@ -67,11 +67,11 @@ Lorem ipsum dolor sit amet.
 
         gallery:[
 
-            "assets/images/farewell-1.jpg",
+            "assets/images/padel1.jpg",
 
-            "assets/images/farewell-2.jpg",
+            "assets/images/padel2.jpg",
 
-            "assets/images/farewell-3.jpg"
+            "assets/images/padel-3.jpg"
 
         ]
 
