@@ -1068,88 +1068,12 @@ PROJECT MODAL
 
 }
 
-.image-preview{
+.project-actions{
 
-position:fixed;
+    margin-top:40px;
 
-inset:0;
+    display:flex;
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-opacity:0;
-
-visibility:hidden;
-
-pointer-events:none;
-
-z-index:4000;
-
-transition:.3s;
-
-}
-
-.image-preview.is-open{
-
-opacity:1;
-
-visibility:visible;
-
-pointer-events:auto;
-
-}
-
-.image-preview__backdrop{
-
-position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,.92);
-
-backdrop-filter:blur(12px);
-
-}
-
-.image-preview img{
-
-position:relative;
-
-max-width:90vw;
-
-max-height:90vh;
-
-border-radius:18px;
-
-box-shadow:0 20px 80px rgba(0,0,0,.5);
-
-}
-
-.image-preview__close{
-
-position:absolute;
-
-top:30px;
-
-right:30px;
-
-width:52px;
-
-height:52px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.08);
-
-color:white;
-
-font-size:28px;
-
-z-index:5;
-
-cursor:pointer;
+    justify-content:center;
 
 }
