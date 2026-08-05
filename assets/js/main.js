@@ -19,7 +19,7 @@ const projects={
 
         client:"@akmh_vaarent",
 
-        video:"assets/videos/vaarent.mp4",
+        video:"assets/videos/varen.mp4",
 
         story:`
 
