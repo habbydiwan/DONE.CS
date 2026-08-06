@@ -93,6 +93,7 @@ Serving as the video production and editing team for HIMPSI Sumut, we captured t
 DONE. Creative Studio delivered a high-quality preview video that cleanly documents the formal ceremony, official greetings, and organizational milestones with a professional finish.
 
 `,
+      gallery:[],
 
         drive:"https://drive.google.com/file/d/1aH5K6rDaq4utcX40UEe5xAJjEkAet2Es/view?usp=sharing"
 
@@ -316,7 +317,7 @@ function initProjectModal() {
 
             modalGallery.innerHTML = "";
 
-            project.gallery.forEach(src => {
+            (project.gallery || []).forEach(src => {
 
                 const img=document.createElement("img");
 
