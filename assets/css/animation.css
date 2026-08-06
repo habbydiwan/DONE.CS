@@ -105,3 +105,27 @@
     transform:none;
 
 }
+
+.stat-card:nth-child(1){
+
+    transition-delay:.05s;
+
+}
+
+.stat-card:nth-child(2){
+
+    transition-delay:.12s;
+
+}
+
+.stat-card:nth-child(3){
+
+    transition-delay:.19s;
+
+}
+
+.stat-card:nth-child(4){
+
+    transition-delay:.26s;
+
+}
