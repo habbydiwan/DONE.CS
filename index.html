@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
 </head>
 <body>
 
@@ -91,11 +92,11 @@
             <div class="container hero__content">
                 <div class="eyebrow" >DONE. Creative Studio</div>
                 <h1 >We create stories people can't ignore.</h1>
-                <p class="hero__lead" >
+                <p class="hero__lead" data-reveal>
                     Branding, filmmaking, and digital experiences shaped
                     to help your business stay unforgettable.
                 </p>
-                <div class="hero__actions" >
+                <div class="hero__actions" data-reveal>
                     <a href="#work" class="button button--primary">View Projects</a>
                     <a href="#contact" class="button button--link">Let's Talk</a>
                 </div>
@@ -115,7 +116,7 @@
                     WHO WE ARE
                 </span>
 
-                <h2>
+                <h2 data-reveal>
                     We don't just make content look good.
                     We make it stay with people.
                 </h2>
@@ -172,9 +173,9 @@
         <section class="section section--work" id="work">
             <div class="container">
                 <div class="section-head" >
-                    <div class="eyebrow">Featured Works</div>
+                    <div class="eyebrow" data-reveal>Featured Works</div>
                     <div class="section-head__content">
-                        <h2>Selected projects crafted with purpose.</h2>
+                        <h2 data-reveal>Selected projects crafted with purpose.</h2>
                         <p>
                             Every project needs its own rhythm, but the goal is always the same:
                             thoughtful execution, clear positioning, and a result people remember.
@@ -278,9 +279,9 @@
         <section class="section" id="services">
             <div class="container">
                 <div class="section-head" >
-                    <div class="eyebrow">Services</div>
+                    <div class="eyebrow" data-reveal>Services</div>
                     <div class="section-head__content">
-                        <h2>What we can build together.</h2>
+                        <h2 data-reveal>What we can build together.</h2>
                         <p>
                             From cinematic storytelling to digital presence,
                             we help brands communicate with clarity, confidence,
@@ -339,9 +340,9 @@
         <section class="section" id="team">
             <div class="container">
                 <div class="section-head" >
-                    <div class="eyebrow">Team</div>
+                    <div class="eyebrow" data-reveal>Team</div>
                     <div class="section-head__content">
-                        <h2>Meet the people behind DONE.</h2>
+                        <h2 data-reveal>Meet the people behind DONE.</h2>
                         <p>Small team. Big ideas. Unlimited execution.</p>
                     </div>
                 </div>
@@ -385,8 +386,8 @@
         <section class="section section--contact" id="contact">
             <div class="container contact-layout">
                 <div class="contact-copy" >
-                    <div class="eyebrow">Contact</div>
-                    <h2>Let's build something remarkable.</h2>
+                    <div class="eyebrow" data-reveal>Contact</div>
+                    <h2 data-reveal>Let's build something remarkable.</h2>
                     <p>
                         Ready to create your next project? We'd love to hear
                         what you're building and where you want to take it.
@@ -438,6 +439,7 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
 
     <!-- =====================================
 PROJECT MODAL
