@@ -51,3 +51,57 @@
     transition-delay:.1s;
 
 }
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about-copy{
+
+    transition-delay:.05s;
+
+}
+
+.about-photo{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+
+        opacity .9s cubic-bezier(.22,.61,.36,1),
+
+        transform .9s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.about-photo.is-visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.stat-card{
+
+    opacity:0;
+
+    transform:translateY(28px);
+
+    transition:
+
+        opacity .7s cubic-bezier(.22,.61,.36,1),
+
+        transform .7s cubic-bezier(.22,.61,.36,1);
+
+}
+
+.stat-card.is-visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
