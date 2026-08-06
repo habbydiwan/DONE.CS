@@ -75,37 +75,26 @@ DONE. Creative Studio stepped in as Social Media Manager for Padel People (@pade
 
     },
 
-   coffee:{
+   himpsi:{
 
-        title:"Local Coffee Brand",
+        title:"HIMPSI Sumut Inauguration",
 
-        role:"Social Media Management • Web Development",
+        role:"Event Documentation • Video Editing",
 
-        year:"2025",
+        year:"2026",
 
         client:"Private Client",
 
-        video:"assets/videos/farewell.mp4",
+        video:"assets/videos/himpsi1.mp4",
 
         story:`
 
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet.
+Serving as the video production and editing team for HIMPSI Sumut, we captured the energy and importance of their 2023–2027 inauguration event.
+DONE. Creative Studio delivered a high-quality preview video that cleanly documents the formal ceremony, official greetings, and organizational milestones with a professional finish.
 
 `,
 
-        gallery:[
-
-            "assets/images/farewell-1.jpg",
-
-            "assets/images/farewell-2.jpg",
-
-            "assets/images/farewell-3.jpg"
-
-        ]
+        drive:"https://drive.google.com/file/d/1aH5K6rDaq4utcX40UEe5xAJjEkAet2Es/view?usp=sharing"
 
     },
 
