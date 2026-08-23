@@ -43,35 +43,35 @@ As the video producer behind this project, DONE. Creative Studio crafted a vibra
 
     },
 
-   padel:{
+   hystero:{
 
-        title:"Padel People",
+        title:"Hystero Coffee",
 
-        role:"Social Media Management • Editing",
+        role:"Digital Marketing • Editing",
 
         year:"2026",
 
-        client:"Padel People",
+        client:"Hystero Coffee",
 
-        video:"assets/videos/padelpeople.mp4",
+        video:"assets/videos/hystero-01.mp4",
 
         story:`
 
-DONE. Creative Studio stepped in as Social Media Manager for Padel People (@padelpeople.medan) to build a vibrant online presence. By producing a blend of high-energy Reels and sleek carousels, we showcase court culture, court features, and player excitement, ensuring the brand stays top of mind for fitness and sports enthusiasts across Medan.
+DONE. Creative Studio stepped in as Social Media Manager for Hystero Coffee (@hysterocoffee) to drive their new menu launch campaign and boost brand awareness in Binjai. Through a mix of visually captivating Reels and engaging aesthetic carousels, we highlighted their fresh menu offerings and cozy atmosphere, successfully sparking local buzz and positioning the cafe as a must-visit spot for coffee lovers.
 
 `,
 
         gallery:[
 
-            "assets/images/padel1.jpg",
+            "assets/images/hystero1.jpg",
 
-            "assets/images/padel2.jpg",
+            "assets/images/hystero2.jpg",
 
-            "assets/images/padel3.jpg"
+            "assets/images/hystero3.jpg"
 
         ],
 
-      drive:"https://www.instagram.com/reel/DITaZjYvfak/?igsh=MTNza2dwajJ1ZXlrbA=="
+      drive:"https://www.instagram.com/reel/DcStfCvzTEJ/?igsi=bmVxNnJwOHR0N2o5"
 
     },
 
